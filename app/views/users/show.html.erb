@@ -1,4 +1,4 @@
-<h1>プロフィール</h1>
+<h1>Profile</h1>
 
 <p>
   <% if @user.avatar.attached? %>
@@ -6,12 +6,18 @@
   <% end %>
 </p>
 
-<h3>名前</h3>
+<h3>Your name</h3>
 <%= @user.name %>
 
-<h3>年齢</h3>
+<h3>Age</h3>
 <%= @user.age %>
 
-<h3>メールアドレス</h3>
+<h3>Email address</h3>
 
 <%= @user.email %>  
+<br><br>
+
+<h3>
+  <%= link_to "Edit your profile", edit_user_registration_path %>&nbsp
+  <%= link_to "Back", :back %>
+</h3>
