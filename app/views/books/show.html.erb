@@ -15,5 +15,12 @@
      <%= image_tag @book.image %>
    <% end %>
 </p>
+
+<p>
+  <h3>Detail</h3>
+  <%= @book.detail %>
+</p>
+
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
