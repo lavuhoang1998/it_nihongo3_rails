@@ -21,6 +21,16 @@
   <%= @book.detail %>
 </p>
 
+<h3>Review</h3>
+ <%= form_with(model: @book_review) do |form| %>
+   <div class= "field">
+     <%= form.text_area :review %>
+     <!--<%= form.text_field :book_id, :value => @book.id %>-->
+   </div>
+   <div class="actions">
+     <%= form.submit %>
+   </div>
+ <% end %>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
